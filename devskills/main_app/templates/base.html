@@ -25,18 +25,25 @@
                         <a href="">Logout</a>
                     </li>
                     <li>
+                        <a href="{%url 'signup' %}">Signup</a>
+                    </li>
+                    <li>
                         <a href="">Register</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="container">
         {% block content %}
         {% endblock %}
     </main>
-    <footer>
-
+    <footer class="footer-copyright">
+        Copyright &copy; DevSkills <span id="year"></span>
     </footer>
+    <script>
+    var year = new Date().getFullYear();
+    document.getElementById('year').textContent = year;
+    </script>
 </body>
 </html>
