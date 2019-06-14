@@ -12,7 +12,7 @@ SKILL_LEVELS = (
 # Create your models here.
 class Skill(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    description = models.TextField(max_length=300)
+    skill = models.CharField(max_length=100)
     skill_level = models.IntegerField(
         choices=SKILL_LEVELS,
         default=1

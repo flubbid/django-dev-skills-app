@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{% block content %}
+<style>
+    .helptext, form > ul {
+        display: none;
+    }
+</style>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Register" class="teal button">
+</form>
+{% endblock %}
